@@ -452,6 +452,7 @@ html, body{ height: 100%; }
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 .menu-pdf-btn a{
@@ -470,6 +471,17 @@ html, body{ height: 100%; }
     border:3px solid #B75BAA;
     color: #B75BAA;
     background:none;
+}
+@media (max-width: 768px) {
+    .menu-pdf-btn {
+        flex-direction: column; /* Zet de buttons onder elkaar op mobiele apparaten */
+        gap: 10px; /* Verklein de ruimte tussen de buttons */
+    }
+
+    .menu-pdf-btn a {
+        min-width: 150px; /* Verklein de minimale breedte van de buttons op mobiele apparaten */
+        width: 100%; /* Laat de buttons de volledige breedte van hun container gebruiken */
+    }
 }
 
 .hvr-underline-from-center {
