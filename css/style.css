@@ -448,6 +448,30 @@ html, body{ height: 100%; }
 	border:3px solid red;
 	background:none;
 }
+.menu-pdf-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-pdf-btn a{
+    background:#B75BAA;
+    color:#fff;
+    min-width: 219px;
+    padding: 10.5px 20px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 800;
+    text-transform:uppercase;
+    font-size:18px;
+}
+
+.menu-pdf-btn a:hover{
+    border:3px solid #B75BAA;
+    color: #B75BAA;
+    background:none;
+}
+
 .hvr-underline-from-center {
     display: inline-block;
     vertical-align: middle;
