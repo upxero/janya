@@ -686,6 +686,16 @@ html, body{ height: 100%; }
     top: 0;
     right: 0;
 }
+.about-guru {
+    position: absolute;
+    bottom: -20px; /* Pas de waarde aan om de positie te finetunen */
+    right: -20px;  /* Pas de waarde aan om de positie te finetunen */
+    width: 40%; /* Zorg ervoor dat de grootte ongeveer gelijk is aan de about-inset afbeelding */
+    border: 10px solid #f1f1f1;
+    border-radius: 999px;
+    box-sizing: border-box;
+}
+
 
 
 /*------------------------------------------------------------------
@@ -1448,151 +1458,115 @@ html, body{ height: 100%; }
 .panel-pricing:hover
 
 
-/*------------------------------------------------------------------
-    RESERVATIONS AREA
--------------------------------------------------------------------*/
+/*-----------------------------------*\
+  #RESERVATION
+\*-----------------------------------*/
 
-.reservations-main{
-	
-}
-
-.form-reservations-box{
-	width:70%;
-	margin:0 auto;
+.reservation-form {
+    margin-block-start: -270px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-.reservations-main h4{
-	text-align:center;
-	font-weight: 500;
-	font-family: 'Roboto', sans-serif;
-	font-size: 22px;
-    padding-top: 25px;
+.form-text {
+    margin-block-end: 40px;
 }
 
-.reservations-main p{
-	text-align:center;
-	font-family: 'Roboto', sans-serif;
-	font-size:16px;
+.form-text .link {
+    display: inline;
+    color: var(--gold-crayola);
 }
 
-.reservations-box{
-	padding-top:30px;
+.form-right .headline-1 {
+    margin-block-end: 40px;
 }
 
-.form-box{
-	margin-bottom:20px;
-	min-height: 53px;
+.form-right .contact-label {
+    margin-block-end: 5px;
 }
 
-.form-box input{
-	width:100%;
-	border:2px dotted #ccc;
-	background:#f5f5f5;
-	color:#202020;
-	padding:12px;
-	text-transform:capitalize;
-	border-radius: 4px;
-	opacity: 1;
-	min-height:54px;
+.form-right .separator {
+    margin: 20px auto;
+    width: 80%;
+    border-bottom: 1px solid var(--quick-silver);
 }
 
-.form-box select{
-	width:100%;
-	border:2px dotted #ccc;
-	background:#f5f5f5;
-	color:#202020;
-	padding: 12px;
-	text-transform:capitalize;
-	border-radius: 4px;
-	-webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-}
-.form-box .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn){
-	width:100%;
-}
-.form-box .bootstrap-select button{
-	width:100%;
-	border:2px dotted #ccc;
-	background:#f5f5f5;
-	color:#202020 !important;
-	padding: 15px;
-	text-transform:capitalize;
-	border-radius: 4px;
-	-webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
+.form-right .body-4 {
+    color: var(--quick-silver);
+    line-height: var(--lineHeight-3);
 }
 
-.form-box select option{
-	-webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 5px;
+.form-right .body-4:not(:last-child) {
+    margin-block-end: 25px;
 }
 
-::-webkit-input-placeholder { /* Chrome */
-  color:#202020;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color:#202020;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color:#202020;
-  opacity: 1;
-}
-:-moz-placeholder { /* Firefox 4 - 18 */
-  color:#202020;
-  opacity: 1;
+.form-left,
+.form-right {
+    padding: 40px 20px 30px;
 }
 
-.reserve-book-btn{
-	padding-top:30px;	
+.input-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-block-end: 20px;
 }
 
-.reserve-book-btn button a{
-	color: #fff;
+.icon-wrapper {
+    position: relative;
+    flex: 1;
 }
 
-.reserve-book-btn button:hover {
-    background: none;
-    color: #202020;
+.icon-wrapper ion-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: var(--quick-silver);
 }
 
-.reserve-book-btn button  {
-    color: #fff;
-    min-width: 219px;
-    padding: 10.5px 20px;
-    display: inline-block;
-    text-align: center;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 18px;
-}
-
-.reserve-book-btn button:hover a{
-	background:none;
-	border:none;
-}
-
-textarea:focus, input:focus, select:focus, .bootstrap-select .dropdown-toggle:focus{
-    outline: none !important;
-}
-.form-box textarea {
+.input-field {
     width: 100%;
+    padding: 12px 12px 12px 40px;
     border: 2px dotted #ccc;
     background: #f5f5f5;
     color: #202020;
-    padding: 12px;
-    text-transform: capitalize;
     border-radius: 4px;
-    min-height: 100px;
-    resize: vertical; 
 }
+
+.input-field[type="date"] {
+    text-transform: uppercase;
+    padding-inline-end: 10px;
+}
+
+.input-field[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+textarea.input-field {
+    resize: none;
+    height: 140px;
+    padding-block: 20px;
+    line-height: var(--lineHeight-1);
+}
+
+.form-left .btn {
+    max-width: 100%;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.form-right {
+    background-repeat: repeat;
+    background-position: top left;
+}
+
 
 /*------------------------------------------------------------------
     FOOTER AREA
